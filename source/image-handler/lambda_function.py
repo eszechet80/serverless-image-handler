@@ -73,6 +73,7 @@ def response_formater(status_code='400',
 
     if str(os.environ.get('ENABLE_CORS')).upper() == "YES":
         api_response['headers']['Access-Control-Allow-Origin'] = os.environ.get('CORS_ORIGIN')
+        status_code = 200
 
     # SO-SIH-175 - 08/28/2018 - Missing header
     # Adding missing header to response
